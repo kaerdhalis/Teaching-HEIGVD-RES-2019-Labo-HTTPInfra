@@ -11,5 +11,5 @@ COPY template /var/apache2/template
 COPY conf/ /etc/apache2
 
 #enable les sites
-RUN a2enmod proxy proxy_http proxy_balancer lbmethod_byrequests
+RUN a2enmod proxy proxy_http proxy_balancer lbmethod_byrequests headers
 RUN a2ensite 000-* 001-* 
